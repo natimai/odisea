@@ -147,12 +147,12 @@ export default function CorporatePage() {
           <p className="text-xl text-gray-600 mb-8">
             צרו איתנו קשר ונשמח לעזור לכם לתכנן את האירוע המושלם
           </p>
-          <a
+          <Link
             href="/#contact"
             className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
             צור קשר
-          </a>
+          </Link>
         </div>
       </div>
 

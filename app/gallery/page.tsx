@@ -1,9 +1,8 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
-import { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import Head from 'next/head'
 
@@ -11,7 +10,7 @@ const imageLoader = ({ src, width, quality }: { src: string; width: number; qual
   return `${src}?w=${width}&q=${quality || 75}`
 }
 
-const metadata: Metadata = {
+const metadata = {
   title: 'גלריית תמונות | אודיסאה - אולם אירועים יוקרתי בבאר שבע',
   description: 'צפו בגלריית התמונות של אולם האירועים אודיסאה. תמונות מאירועים, עיצובים מרהיבים, והחללים המפוארים שלנו.',
   keywords: 'אולם אירועים, גלריית תמונות, אירועים בבאר שבע, חתונות, בר מצוות, אירועים יוקרתיים, אודיסאה',

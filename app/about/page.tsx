@@ -7,8 +7,8 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { useState, useEffect } from 'react'
 import { 
-  HeartIcon, ClockIcon, UserGroupIcon, ShieldCheckIcon,
-  StarIcon, SparklesIcon, GlobeAltIcon, HandRaisedIcon,
+  UserGroupIcon, ShieldCheckIcon,
+  StarIcon, SparklesIcon, HandRaisedIcon,
   TrophyIcon, ChartBarIcon, FireIcon, CheckBadgeIcon
 } from '@heroicons/react/24/outline'
 import Footer from '@/components/Footer'

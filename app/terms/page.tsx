@@ -87,7 +87,7 @@ export default function TermsPage() {
           </p>
           <ul>
             <li>טלפון: 08-1234567</li>
-            <li>דוא"ל: info@odisea.co.il</li>
+            <li>דוא&quot;ל: info@odisea.co.il</li>
             <li>כתובת: רחוב הרצל 123, באר שבע</li>
           </ul>
         </div>

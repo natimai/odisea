@@ -152,12 +152,12 @@ export default function FAQPage() {
               <p className="text-lg text-gray-600 mb-8">
                 אנחנו כאן בשבילכם. צרו איתנו קשר ונשמח לעזור
               </p>
-              <a
+              <Link
                 href="/#contact"
                 className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 צור קשר
-              </a>
+              </Link>
             </FadeIn>
           </div>
         </div>
