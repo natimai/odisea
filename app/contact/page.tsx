@@ -92,7 +92,7 @@ export default function ContactPage() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  דוא"ל
+                  דוא&quot;ל
                 </label>
                 <input
                   type="email"
@@ -183,7 +183,7 @@ export default function ContactPage() {
                   </a>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-white mb-2">דוא"ל</h3>
+                  <h3 className="text-lg font-medium text-white mb-2">דוא&quot;ל</h3>
                   <a
                     href="mailto:info@odisea.co.il"
                     className="text-gray-300 hover:text-red-500 transition-colors"

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
 import { Metadata } from 'next'
@@ -504,16 +504,12 @@ categories.forEach(category => {
 
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
-  const [selectedImage, setSelectedImage] = useState<number | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const { scrollYProgress } = useScroll()
   
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95])
-
-  useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1000)
-  }, [])
 
   const filteredImages = selectedCategory === 'all' 
     ? galleryItems 
@@ -650,7 +646,7 @@ export default function GalleryPage() {
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.5 }}
                     className="relative cursor-pointer group"
-                    onClick={() => setSelectedImage(item.id)}
+                    onClick={() => setSelectedImage(item.src)}
                     role="gridcell"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl">
@@ -697,8 +693,8 @@ export default function GalleryPage() {
               >
                 <div className="relative w-full h-full">
                   <Image
-                    src={galleryItems.find(item => item.id === selectedImage)?.src || ''}
-                    alt={`${galleryItems.find(item => item.id === selectedImage)?.alt || ''} - אודיסאה אולם אירועים`}
+                    src={selectedImage}
+                    alt={`${selectedImage} - אודיסאה אולם אירועים`}
                     fill
                     className="object-contain"
                     sizes="100vw"
@@ -714,11 +710,8 @@ export default function GalleryPage() {
                 </button>
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 bg-gradient-to-t from-black/80 to-transparent">
                   <h3 className="text-white text-xl sm:text-2xl font-medium mb-1 sm:mb-2">
-                    {galleryItems.find(item => item.id === selectedImage)?.alt}
+                    {selectedImage}
                   </h3>
-                  <p className="text-sm sm:text-base text-gray-200/80">
-                    {galleryItems.find(item => item.id === selectedImage)?.description}
-                  </p>
                 </div>
               </motion.div>
             </motion.div>

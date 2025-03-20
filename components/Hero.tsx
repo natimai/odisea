@@ -5,6 +5,7 @@ import { FadeIn, SlideUp } from './Animations'
 import ParallaxBackground from './ParallaxBackground'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false)
@@ -71,22 +72,22 @@ export default function Hero() {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <a href="#gallery" className="text-white">
+        <Link href="/" className="text-white animate-bounce">
           <svg
-            className="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              d="M19 9l-7 7-7-7"
             />
           </svg>
-        </a>
+        </Link>
       </motion.div>
     </div>
   )

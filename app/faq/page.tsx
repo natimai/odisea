@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Footer from '@/components/Footer'
 import { FadeIn, SlideUp } from '@/components/Animations'
+import Link from 'next/link'
 
 const faqCategories = [
   {
@@ -62,6 +63,10 @@ export default function FAQPage() {
   const [openCategory, setOpenCategory] = useState<string | null>(null)
   const [openQuestion, setOpenQuestion] = useState<string | null>(null)
 
+  const handleQuestionClick = (index: number) => {
+    setOpenQuestion(openQuestion === index.toString() ? null : index.toString())
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -114,13 +119,13 @@ export default function FAQPage() {
                       {category.questions.map((item, qIndex) => (
                         <div key={item.question} className="border-b border-gray-100 last:border-0 pb-4 last:pb-0">
                           <button
-                            onClick={() => setOpenQuestion(openQuestion === item.question ? null : item.question)}
+                            onClick={() => handleQuestionClick(qIndex)}
                             className="w-full text-right flex items-center justify-between"
                           >
                             <h3 className="text-lg font-semibold text-gray-900">{item.question}</h3>
                             <svg
                               className={`w-5 h-5 transform transition-transform ${
-                                openQuestion === item.question ? 'rotate-180' : ''
+                                openQuestion === qIndex.toString() ? 'rotate-180' : ''
                               }`}
                               fill="none"
                               stroke="currentColor"
@@ -129,7 +134,7 @@ export default function FAQPage() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                           </button>
-                          {openQuestion === item.question && (
+                          {openQuestion === qIndex.toString() && (
                             <p className="mt-2 text-gray-600">{item.answer}</p>
                           )}
                         </div>
@@ -159,6 +164,10 @@ export default function FAQPage() {
       </div>
 
       <Footer />
+
+      <Link href="/" className="text-red-600 hover:text-red-700">
+        חזרה לדף הבית
+      </Link>
     </div>
   )
 } 

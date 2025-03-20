@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 
 export default function CorporatePage() {
   return (
@@ -156,6 +157,10 @@ export default function CorporatePage() {
       </div>
 
       <Footer />
+
+      <Link href="/" className="text-red-600 hover:text-red-700">
+        חזרה לדף הבית
+      </Link>
     </div>
   )
 } 

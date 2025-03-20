@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer'
 import { FadeIn, SlideUp } from '@/components/Animations'
+import Link from 'next/link'
 
 export default function PricingPage() {
   return (
@@ -122,6 +123,10 @@ export default function PricingPage() {
       </div>
 
       <Footer />
+
+      <Link href="/" className="text-red-600 hover:text-red-700">
+        חזרה לדף הבית
+      </Link>
     </div>
   )
 } 

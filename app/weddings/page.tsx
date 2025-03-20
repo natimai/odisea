@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 
 export default function WeddingsPage() {
   return (
@@ -153,6 +154,10 @@ export default function WeddingsPage() {
             צור קשר
           </a>
         </div>
+
+        <Link href="/" className="text-red-600 hover:text-red-700">
+          חזרה לדף הבית
+        </Link>
       </div>
 
       <Footer />
