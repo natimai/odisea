@@ -13,7 +13,7 @@ import {
 } from '@heroicons/react/24/outline'
 import Footer from '@/components/Footer'
 
-const metadata: Metadata = {
+const _metadata: Metadata = {
   title: 'אודות אודיסאה | אולם אירועים יוקרתי בבאר שבע - 35 שנות מצוינות',
   description: 'הכירו את אודיסאה - אולם האירועים המוביל בבאר שבע. מסורת של 35 שנות מצוינות, צוות מקצועי מנוסה, וחוויית אירוח יוצאת דופן. הצטרפו לאלפי הזוגות שבחרו בנו.',
   openGraph: {

@@ -6,11 +6,11 @@ import Image from 'next/image'
 import Footer from '@/components/Footer'
 import Head from 'next/head'
 
-const imageLoader = ({ src, width, quality }: { src: string; width: number; quality?: number }) => {
+const _imageLoader = ({ src, width, quality }: { src: string; width: number; quality?: number }) => {
   return `${src}?w=${width}&q=${quality || 75}`
 }
 
-const metadata = {
+const _metadata = {
   title: 'גלריית תמונות | אודיסאה - אולם אירועים יוקרתי בבאר שבע',
   description: 'צפו בגלריית התמונות של אולם האירועים אודיסאה. תמונות מאירועים, עיצובים מרהיבים, והחללים המפוארים שלנו.',
   keywords: 'אולם אירועים, גלריית תמונות, אירועים בבאר שבע, חתונות, בר מצוות, אירועים יוקרתיים, אודיסאה',
@@ -504,7 +504,7 @@ categories.forEach(category => {
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [_isModalOpen, _setIsModalOpen] = useState(false)
   const { scrollYProgress } = useScroll()
   
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
