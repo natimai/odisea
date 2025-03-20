@@ -120,7 +120,7 @@ export default function BarMitzvahsPage() {
             <h3 className="text-xl font-bold mb-4">חבילות מותאמות</h3>
             <p className="text-gray-600">
               אנחנו מציעים חבילות מותאמות אישית לכל משפחה, כולל אפשרויות
-              שונות לקייטרינג, די.ג'יי, ועוד.
+              שונות לקייטרינג, די.ג&apos;יי, ועוד.
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
