@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Footer from '@/components/Footer'
 import { ArrowLeftIcon, SparklesIcon, PhoneIcon, PhotoIcon, CalendarIcon, MapPinIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 import { useRef } from 'react'
+import AccessibilityButton from '@/components/AccessibilityButton'
 
 export default function HomePage() {
   const targetRef = useRef(null)
@@ -305,6 +306,7 @@ export default function HomePage() {
       </section>
 
       <Footer />
+      <AccessibilityButton />
     </main>
   )
 }
