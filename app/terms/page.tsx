@@ -1,3 +1,6 @@
+'use client'
+
+import React from 'react'
 import Footer from '@/components/Footer'
 
 export default function TermsPage() {
@@ -20,31 +23,6 @@ export default function TermsPage() {
 
       {/* Content Section */}
       <div className="container mx-auto px-4 py-16">
-        <div className="max-w-3xl mx-auto">
-          {/* Terms of Service */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-6">תנאי שימוש</h2>
-            <div className="space-y-4">
-              <p className="text-gray-600">
-                כל המידע באתר הוא בבעלות אודיסאה ומוגן בזכויות יוצרים.
-              </p>
-              <p className="text-gray-600">
-                אסור להעתיק, להפיץ או להשתמש במידע מהאתר ללא אישור בכתב.
-              </p>
-              <p className="text-gray-600">
-                אנו שומרים על זכותנו לשנות את התנאים בכל עת ללא הודעה מוקדמת.
-              </p>
-              <p className="text-gray-600">
-                השימוש באתר הוא על אחריות המשתמש בלבד.
-              </p>
-            </div>
-          </section>
-
-          {/* Privacy Policy */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-6">מדיניות פרטיות</h2>
-            <div className="space-y-4">
-              <p className="text-gray-600">
         <div className="max-w-3xl mx-auto prose prose-lg">
           <h2>תנאי שימוש</h2>
           <p>
@@ -114,6 +92,7 @@ export default function TermsPage() {
           </ul>
         </div>
       </div>
+      <Footer />
     </div>
   )
 } 
